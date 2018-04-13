@@ -1,13 +1,31 @@
-<h2>Angular experiment by Milandarius</h2>
-<div>
-  <ul>
-    <li *ngFor="let user of users; index as i"
-        [class.selected]="user === selected"
-        (click)="selectedUser(user)">
-      {{i +1}} - {{user.name}}
-    </li>
-  </ul>
-</div>
-<div>
-  <h3> Selected user is: <span *ngIf="selected">{{selected.name}}</span></h3>
-</div>
+<body [style.background-color]="randomcolor">
+  <h2>Angular experiment by Milandarius</h2>
+  <div>
+    <ul>
+      <li *ngFor="let user of users; index as i"
+          [class.selected]="user === selected"
+          (click)="selectedUser(user)">
+        {{i +1}} - {{user.name}}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h3> Selected user is: <span *ngIf="selected">{{selected.name}}</span></h3>
+  </div>
+
+
+  <button (click)="setColor()">Change bg color</button>
+
+  <button [style.background-color]="isSpecial ? 'red': 'green'">Red</button>
+  <button [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
+
+  <button (click)="onSave($event)">Kick me</button>
+
+  <div *ngIf="!isSpecial">Show me hide me</div>
+
+  <button (click)="big=!big">{{big ? '-' : '+'}}</button>
+  <div *ngIf="big">Show me hide me 222</div>
+
+  <app-child [users]="users"></app-child>
+</body>
+
