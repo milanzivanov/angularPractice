@@ -23,6 +23,31 @@
 
   <div *ngIf="!isSpecial">Show me hide me</div>
 
+
+
+  <div [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">
+    style using ngStyle
+  </div>
+
+
+  <input [(ngModel)]="color" />
+  <button (click)="size = size + 1">+</button>
+  <button (click)="size = size - 1">-</button>
+
+  <div [ngStyle]="{'color': color, 'font-size': size + 'px'}">
+    style using ngStyle
+  </div>
+
+  <br /><br/>
+
+  <div [ngClass]="['bold-text', 'green']">array of classes</div>
+  <div [ngClass]="'italic-text blue'">string of classes</div>
+  <div [ngClass]="{'small-text': true, 'red': true}">object/map of classes</div>
+
+  <span [ngClass]="displayText">toggled with ngClass</span>
+  <button (click)="toggle()">Toggle</button>
+
+  <hr>
   <button (click)="big=!big">{{big ? '-' : '+'}}</button>
   <div *ngIf="big">Show me hide me 222</div>
 

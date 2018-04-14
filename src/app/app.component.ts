@@ -15,6 +15,11 @@ export class AppComponent implements OnInit {
   public selected: RootObject;
 
 
+  color = 'pink';
+  size = 16;
+  displayText = 'show-class';
+  visible = true;
+
   canSave = true;
   isSpecial = true;
 
@@ -67,4 +72,9 @@ export class AppComponent implements OnInit {
   }
 
 
+  // toggled with ngClass
+  toggle() {
+    this.visible = !this.visible;
+    this.displayText = this.visible ? 'show-class' : 'hide-class';
+  }
 }
