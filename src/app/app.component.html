@@ -1,6 +1,14 @@
-<body [style.background-color]="randomcolor">
+<button (click)="toggleMenu()" class="hamburger">
+  <span>toggle menu</span>
+</button>
+<app-menu [@slideInOut]="menuState"></app-menu>
 
-    <app-gmap></app-gmap>
+<app-gmap></app-gmap>
+<app-chart></app-chart>
+
+
+<div class="bc" [style.background-color]="randomcolor">
+
 
 
   <h2>Angular experiment by Milandarius</h2>
@@ -56,5 +64,5 @@
   <div *ngIf="big">Show me hide me 222</div>
 
   <app-child [users]="users"></app-child>
-</body>
+</div>
 
