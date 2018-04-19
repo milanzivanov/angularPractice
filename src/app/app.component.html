@@ -64,5 +64,31 @@
   <div *ngIf="big">Show me hide me 222</div>
 
   <app-child [users]="users"></app-child>
+
+  <!-- open close  -->
+​  <button class="btn"
+          *ngIf="!list"
+          (click)="list = true"
+          [ngClass]="list ? 'show-active' : 'hide-active'">
+    <i class="material-icons md-48">menu</i>
+  </button>
+  <button class="btn"
+          *ngIf="list"
+          (click)="list = false"
+          [ngClass]="list ? 'show-active' : 'hide-active'">
+      <i class="material-icons md-48">close</i>
+  </button>
+
+  <div *ngIf="list" [ngClass]="list ? 'show-active' : 'hide-active'">
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores blanditiis sit
+      eveniet veniam, doloribus hic corrupti nesciunt reiciendis, tempore quis vel,
+      nihil quam incidunt illum consequatur quas eaque dolorum repellendus.
+    </p>
+  </div>
+
+
 </div>
+
+<app-slide-menu></app-slide-menu>
 

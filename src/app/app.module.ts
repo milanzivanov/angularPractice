@@ -13,8 +13,7 @@ import { ChartComponent } from './chart/chart.component';
 import { KorisniciApiService } from './korisnici-api.service';
 import { WeatherService } from './weather.service';
 import { MenuComponent } from './menu/menu.component';
-
-
+import { SlideMenuComponent } from './slide-menu/slide-menu.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import { MenuComponent } from './menu/menu.component';
     ChildComponent,
     GmapComponent,
     ChartComponent,
-    MenuComponent
+    MenuComponent,
+    SlideMenuComponent
   ],
   imports: [
     BrowserAnimationsModule,

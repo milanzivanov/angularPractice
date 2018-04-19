@@ -41,6 +41,9 @@ export class AppComponent implements OnInit {
 
   big = false;
 
+  // open close
+  list = false;
+
    // set a property that holds a random color for our style.
    randomcolor = this.getRandomColor();
 
@@ -52,6 +55,16 @@ export class AppComponent implements OnInit {
     // });
 
   }
+
+
+// open close
+
+toggle2() {
+  console.log('open close');
+  // this.displayText = this.visible ? 'show-active' : 'hide-active';
+
+}
+
 
   // promise async await
   async ngOnInit() {
@@ -99,4 +112,5 @@ export class AppComponent implements OnInit {
     // 1-line if statement that toggles the value:
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
   }
+
 }
