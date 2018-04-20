@@ -44,6 +44,9 @@ export class AppComponent implements OnInit {
   // open close
   list = false;
 
+  // menu
+
+
    // set a property that holds a random color for our style.
    randomcolor = this.getRandomColor();
 
@@ -107,10 +110,14 @@ toggle2() {
 
   // tslint:disable-next-line:member-ordering
   menuState = 'out';
+  // tslint:disable-next-line:member-ordering
+  menuActive = true;
 
   toggleMenu() {
     // 1-line if statement that toggles the value:
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+
+    this.menuActive = !this.menuActive;
   }
 
 }

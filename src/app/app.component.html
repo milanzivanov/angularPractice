@@ -1,7 +1,13 @@
-<button (click)="toggleMenu()" class="hamburger">
-  <span>toggle menu</span>
+<button (click)="toggleMenu()"
+        class="hamburger">
+  <span [ngClass]="menuActive ? 'active' : 'noActive'">
+    toggle menu
+  </span>
 </button>
 <app-menu [@slideInOut]="menuState"></app-menu>
+
+<app-slide-menu></app-slide-menu>
+
 
 <app-gmap></app-gmap>
 <app-chart></app-chart>
@@ -90,5 +96,5 @@
 
 </div>
 
-<app-slide-menu></app-slide-menu>
+
 

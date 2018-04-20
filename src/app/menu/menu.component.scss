@@ -22,5 +22,8 @@ ul {
   margin: 0;
   li {
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
