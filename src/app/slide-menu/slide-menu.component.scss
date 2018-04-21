@@ -90,6 +90,7 @@ wider_container {
   text-transform: uppercase;
   font-size: 60px;
   order: -1;
+  padding: 0 0 2px 0;
 }
 
 .main h1 span {
@@ -102,3 +103,87 @@ wider_container {
 }
 
 .material-icons.md-48 { font-size: 48px; }
+
+
+//
+.modal {
+  position: fixed;
+  z-index: 16;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 96px);
+  overflow: auto;
+  background-color: rgba(0,0,0, 0.7);
+  transition: all 0.3s;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 15% auto;
+  padding:  20px;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+              0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.modal-content img {
+  height: auto;
+  max-width: 100%;
+}
+
+.modal-content:hover > .closeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  transition: 0.3s all ease-in-out;
+}
+
+.modal-content:hover > img {
+  transform: none;
+}
+
+.modal-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closeBtn {
+  position: absolute;
+  color: #ccc;
+  display: none;
+  font-size: 50px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: indianred;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(238, 238, 238, 0.3);
+}
+
+@keyframes modalopen {
+  0% {
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    50% {
+      opacity: 0.5;
+      transition: all 0.3s ease-in-out;
+
+    }
+    100% {
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+  }
+}

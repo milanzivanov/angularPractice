@@ -1,11 +1,11 @@
 
 <section id="contact">
   <div class="container wider_container">
-
-
       <div class="container">
           <div class="main">
-              <a href="#" id="modalBtn" class="cta">Frontend Developer
+              <a href="#" id="modalBtn" class="cta" (click)="showDialog = !showDialog">
+              <!-- <a href="#" id="modalBtn" class="cta" (click)=ClickButton()> -->
+                Frontend Developer
                 <i class="material-icons md-48">keyboard_arrow_right</i>
               </a>
               <h1>
@@ -15,7 +15,19 @@
               </h1>
           </div>
         </div>
-
-
   </div>
 </section>
+
+<!-- <popup>
+  <p>bla bla</p>
+</popup> -->
+
+<div id="simpleModal"
+     class="modal"
+     [style.visibility]="showDialog ? 'visible' : 'hidden'">
+  <div class="modal-content">
+      <span class="closeBtn" (click)="showDialog = !showDialog">&times;</span>
+      <img src="../../assets/just_me.jpg"
+           alt="my picture">
+  </div>
+</div>
