@@ -21,19 +21,8 @@ section#contact {
   align-items: center;
 
   font-family: 'Roboto', sans-serif, 'Inter UI',sans-serif;
-  font-family: 'ns';
+  font-family: 'ns', sans-serif;
 }
-
-// section#contact::after {
-//   z-index: 3;
-//   position: absolute;
-//   content: "";
-//   background-color: rgba(0, 0, 0, 0.4);
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-// }
 
 wider_container {
   width: 85%;
