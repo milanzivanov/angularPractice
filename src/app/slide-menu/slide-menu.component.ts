@@ -8,6 +8,8 @@ import { Popup } from 'ng2-opd-popup';
 })
 export class SlideMenuComponent implements OnInit {
 
+  showDialog = false;
+
   constructor(private popup: Popup) { }
 
   ngOnInit() {
